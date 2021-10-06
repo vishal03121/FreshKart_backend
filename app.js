@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const mongoose = require("mongoose");
 const path = require("path");
 const cors = require("cors");
+require('dotenv').config();
 
 // importing routes
 const indexRoutes = require("./routes/index");
@@ -58,7 +59,7 @@ app.use((error, req, res, next) => {
 });
   
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT;
 const DB_STRING = process.env.DB_HOST;
 
 // database connection
