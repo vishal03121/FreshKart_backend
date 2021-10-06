@@ -12,7 +12,7 @@ exports.sendOTPMail = async (to_email , imageData, manualKey) => {
       pass: process.env.EMAIL_PASSWORD,
     },
   });
-
+  console.log(process.env.EMAIL_PASSWORD,process.env.EMAIL);
   const html =`
   <h1>Please Save this Email for future references.</h1>
   <p>Scan the Below Qr Code with Google Authenticator to get the OTP</p><br/>
